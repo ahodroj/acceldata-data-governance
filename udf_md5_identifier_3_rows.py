@@ -4,7 +4,10 @@ import json
 import hashlib
 
 def evaluatePredicate(rowJson):
-  row = json.loads(rowJson)
-  text = str(row['NAME']) + str(row['PERMALINK'] + str(row['TYPE']))
+  try:
+    row = json.loads(rowJson)
+    text = str(row['NAME']) + str(row['PERMALINK'] + str(row['TYPE']))
 
-  return hashlib.md5(text.encode('utf-8')).hexdigest()
+    return hashlib.md5(text.encode('utf-8')).hexdigest()
+  except Exception:
+    return "ERROR GENERATING ID"
