@@ -6,8 +6,8 @@
 ````
 curl --request POST \
 --url 'https://sandbox.acceldata.app/catalog-server/api/assets/43510/profile' \
---header 'accessKey: 5W1ZDFKKLMVQ0JT' \
---header 'secretKey: YKEK5W57KXP5IFAW2OI59L902JQCHP' \
+--header 'accessKey: ACCESS' \
+--header 'secretKey: SECRET' \
 --data '{
  "data": {
    "profilingType": "FULL"
